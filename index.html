@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Tiago Martins de Oliveira - Dev em Formação</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <span class="logo-bracket">&lt;</span>Tiago Martins de Oliveira<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="#stack" class="nav__link">Stack</a></li>
+        <li><a href="#certificados" class="nav__link">Certificados</a></li>
+        <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero">
+      <div class="hero__particles" id="particles"></div>
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting animate-fade-up">Olá, eu sou</p>
+          <h1 class="hero__name animate-fade-up delay-1" style="
+    padding-bottom: 20px;
+">Tiago</h1>
+          <h2 class="hero__title animate-fade-up delay-2">
+            <span class="typed-text" id="typed-text">Desenvolvedor Full Stack</span>
+            <span class="cursor">|</span>
+          </h2>
+          <p class="hero__description animate-fade-up delay-3">
+            Estudante de Análise e Desenvolvimento de Sistemas focado em criar experiências digitais
+            fluidas, código limpo e soluções escaláveis para problemas do mundo real.
+          </p>
+          <div class="hero__actions animate-fade-up delay-4">
+            <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+            <a href="#contato" class="btn btn--outline">Vamos Conversar</a>
+          </div>
+          <div class="hero__social animate-fade-up delay-5">
+            <a href="https://www.linkedin.com/in/massacral/" class="social-link" aria-label="LinkedIn" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://github.com/Massacral" class="social-link" aria-label="GitHub" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__image animate-fade-up delay-3">
+          <div class="hero__avatar">
+            <div class="avatar-ring"></div>
+            <img src="https://avatars.githubusercontent.com/u/206124255?v=4" alt="Foto de perfil"
+              onerror="this.style.display='none'">
+            <div class="avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+        <div class="mouse">
+          <div class="mouse__wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ========== SOBRE MIM ========== -->
+    <section id="sobre" class="section sobre">
+      <div class="container">
+        <h2 class="section__title reveal">
+          Sobre <span class="highlight">Mim</span>
+        </h2>
+        <div class="sobre__grid">
+          <div class="sobre__image reveal reveal--left">
+            <div class="image-card">
+              <img src="assets/images/profile/foto-sobre.png" alt="Foto sobre mim"
+                onerror="this.parentElement.innerHTML='<div class=image-placeholder><svg xmlns=http://www.w3.org/2000/svg width=60 height=60 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><path d=M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2/><circle cx=12 cy=7 r=4/></svg></div>'">
+            </div>
+            <div class="image-card__decoration"></div>
+          </div>
+          <div class="sobre__content reveal reveal--right">
+            <h3 class="sobre__subtitle">Desenvolvedor em Formação</h3>
+            <p class="sobre__text">
+              Apaixonado por tecnologia e pelo poder transformador do código. Atualmente, estou mergulhada no universo
+              do Desenvolvimento de Sistemas, aprendendo a transformar ideias em aplicações funcionais e intuitivas.
+            </p>
+            <p class="sobre__text">
+              Minha jornada na programação é movida pela curiosidade constante e pela vontade de resolver problemas
+              complexos através da tecnologia. Tenho foco em tecnologias modernas de Frontend e Backend, buscando sempre
+              as melhores práticas de mercado.
+            </p>
+            <div class="sobre__stats">
+              <div class="stat">
+                <span class="stat__number">1</span>
+                <span class="stat__suffix">+</span>
+                <span class="stat__label">Ano de Estudo</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">15</span>
+                <span class="stat__suffix">+</span>
+                <span class="stat__label">Repositórios Git</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">22</span>
+                <span class="stat__suffix">+</span>
+                <span class="stat__label">Certificações</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn--primary btn--download">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Baixar Currículo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJETOS ========== -->
+    <section id="projetos" class="section projetos">
+      <div class="container">
+        <h2 class="section__title reveal">
+          Meus <span class="highlight">Projetos</span>
+        </h2>
+        <p class="section__subtitle reveal">Aplicações que desenvolvi durante minha formação</p>
+
+        <div class="projetos__grid">
+          <!-- Projeto em destaque -->
+          <article class="projeto-card projeto-card--featured reveal">
+            <div class="projeto-card__image projeto-card__image--koenma">
+              <div class="koenma-preview" aria-hidden="true">
+                <span class="koenma-preview__eyebrow">Japanese Cuisine</span>
+                <strong>KOENMA</strong>
+                <span class="koenma-preview__subtitle">Sushi</span>
+              </div>
+              <div class="projeto-card__overlay">
+                <a class="projeto-card__link" href="https://github.com/Massacral/koenma_sushi_nw"
+                  target="_blank" rel="noopener noreferrer" aria-label="Ver Koenma Sushi no GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4" />
+                    <path d="M8 19c-3 .9-3-1.5-4-2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="projeto-card__content">
+              <span class="projeto-card__status">Projeto em destaque</span>
+              <h3 class="projeto-card__title">Koenma Sushi</h3>
+              <p class="projeto-card__description">E-commerce full stack para restaurante japonês, com cardápio,
+                autenticação, carrinho, pedidos, reservas e painel administrativo.</p>
+              <div class="projeto-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Express</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JWT</span>
+              </div>
+              <a class="projeto-card__github" href="https://github.com/Massacral/koenma_sushi_nw"
+                target="_blank" rel="noopener noreferrer">
+                Ver repositório
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Projeto publicado -->
+          <article class="projeto-card projeto-card--featured reveal">
+            <div class="projeto-card__image projeto-card__image--luxe">
+              <div class="luxe-preview" aria-hidden="true">
+                <span class="luxe-preview__monogram">LV</span>
+                <strong>Luxe Vintage</strong>
+                <span>Brechó de Luxo</span>
+              </div>
+              <div class="projeto-card__overlay">
+                <a class="projeto-card__link" href="https://brecho-luxo-front.onrender.com/"
+                  target="_blank" rel="noopener noreferrer" aria-label="Abrir Luxe Vintage">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="projeto-card__content">
+              <span class="projeto-card__status projeto-card__status--online">Projeto online</span>
+              <h3 class="projeto-card__title">Luxe Vintage</h3>
+              <p class="projeto-card__description">E-commerce de brechó de luxo para descoberta de peças vintage,
+                com catálogo, favoritos, autenticação, carrinho e acompanhamento de pedidos.</p>
+              <div class="projeto-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Axios</span>
+                <span class="tag">Render</span>
+              </div>
+              <a class="projeto-card__github" href="https://brecho-luxo-front.onrender.com/"
+                target="_blank" rel="noopener noreferrer">
+                Acessar projeto
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Projeto publicado -->
+          <article class="projeto-card projeto-card--featured reveal">
+            <div class="projeto-card__image projeto-card__image--primedrive">
+              <div class="primedrive-preview" aria-hidden="true">
+                <span class="primedrive-preview__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 64 64" fill="none">
+                    <path d="M18 38h3a3 3 0 0 0 6 0h10a3 3 0 0 0 6 0h3v-6l-3-9a4 4 0 0 0-4-3H25a4 4 0 0 0-4 3l-3 9v6zm7-10 2-6h12l2 6H25z" fill="currentColor" />
+                  </svg>
+                </span>
+                <strong>Prime Drive</strong>
+                <span class="primedrive-preview__subtitle">Mobilidade inteligente</span>
+              </div>
+              <div class="projeto-card__overlay">
+                <a class="projeto-card__link" href="https://primedrive-frontend-1dw6.onrender.com"
+                  target="_blank" rel="noopener noreferrer" aria-label="Abrir Prime Drive">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="projeto-card__content">
+              <span class="projeto-card__status projeto-card__status--online">Projeto online</span>
+              <h3 class="projeto-card__title">Prime Drive</h3>
+              <p class="projeto-card__description">Plataforma de mobilidade para passageiros e motoristas, com
+                solicitação de corridas, mapas, chat, pagamentos, avaliações e painel administrativo.</p>
+              <div class="projeto-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Leaflet</span>
+                <span class="tag">Axios</span>
+                <span class="tag">WebSocket</span>
+              </div>
+              <a class="projeto-card__github" href="https://primedrive-frontend-1dw6.onrender.com"
+                target="_blank" rel="noopener noreferrer">
+                Acessar projeto
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Projeto mobile -->
+          <article class="projeto-card projeto-card--featured reveal">
+            <div class="projeto-card__image projeto-card__image--cresci">
+              <div class="cresci-preview" aria-hidden="true">
+                <span class="cresci-preview__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 3h3a2 2 0 0 1 2 2v3" />
+                    <path d="m21 3-7 7" />
+                    <path d="M8 21H5a2 2 0 0 1-2-2v-3" />
+                    <path d="m3 21 7-7" />
+                    <path d="M7 3h2l3 3 3-3h2" />
+                    <path d="M9 6v5H6l-2-4" />
+                    <path d="M15 6v5h3l2-4" />
+                  </svg>
+                </span>
+                <strong>Cresci e Perdi</strong>
+                <span class="cresci-preview__subtitle">Roupas infantis ganham novas histórias</span>
+              </div>
+              <div class="projeto-card__overlay">
+                <a class="projeto-card__link" href="https://github.com/Massacral/cresci_e_perdi"
+                  target="_blank" rel="noopener noreferrer" aria-label="Ver Cresci e Perdi no GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4" />
+                    <path d="M8 19c-3 .9-3-1.5-4-2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="projeto-card__content">
+              <span class="projeto-card__status projeto-card__status--mobile">Aplicativo mobile</span>
+              <h3 class="projeto-card__title">Cresci e Perdi</h3>
+              <p class="projeto-card__description">Plataforma para troca e venda de roupas infantis, com publicação de
+                produtos, favoritos, perfis de usuários e chat entre pessoas interessadas.</p>
+              <div class="projeto-card__tags">
+                <span class="tag">React Native</span>
+                <span class="tag">Expo</span>
+                <span class="tag">Express</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a class="projeto-card__github" href="https://github.com/Massacral/cresci_e_perdi"
+                target="_blank" rel="noopener noreferrer">
+                Ver repositório
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FERRAMENTAS & COMPETÊNCIAS ========== -->
+    <section id="stack" class="section stack">
+      <div class="container">
+        <h2 class="section__title reveal">
+          Minha <span class="highlight">Stack</span>
+        </h2>
+        <p class="section__subtitle reveal">Tecnologias que utilizo no meu dia a dia</p>
+
+        <div class="stack__categories">
+          <!-- Frontend -->
+          <div class="stack__category reveal">
+            <h3 class="stack__category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              Frontend
+            </h3>
+            <div class="stack__items">
+              <div class="stack__item">
+                <div class="stack__icon">HTML</div>
+                <span>HTML5</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">CSS</div>
+                <span>CSS3 / Sass</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">JS</div>
+                <span>JavaScript</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">React</div>
+                <span>React.js</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">RN</div>
+                <span>React Native</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">C</div>
+                <span>Linguagem C</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend & Database -->
+          <div class="stack__category reveal">
+            <h3 class="stack__category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" />
+                <line x1="6" y1="18" x2="6.01" y2="18" />
+              </svg>
+              Backend & DB
+            </h3>
+            <div class="stack__items">
+              <div class="stack__item">
+                <div class="stack__icon">Node</div>
+                <span>Node.js</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">SQL</div>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">API</div>
+                <span>REST APIs</span>
+              </div>
+              <div class="stack__item">
+                <div class="stack__icon">TS</div>
+                <span>TypeScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERTIFICADOS ========== -->
+    <section id="certificados" class="section certificados">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="highlight">Certificados</span>
+        </h2>
+        <p class="section__subtitle reveal">Certificações e módulos concluídos pela Cisco Networking Academy</p>
+        <div class="certificados__grid">
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">CSS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Badge</span>
+              <h3 class="certificado-card__title">CSS Essentials</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">16 de maio de 2026</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">CSS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Certificado</span>
+              <h3 class="certificado-card__title">CSS Essentials</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">18 de maio de 2026</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Badge</span>
+              <h3 class="certificado-card__title">JavaScript Essentials 1</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">10 de maio de 2026</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Certificado</span>
+              <h3 class="certificado-card__title">JavaScript Essentials 1</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">18 de maio de 2026</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">LNX</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Badge</span>
+              <h3 class="certificado-card__title">Linux Unhatched</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">30 de março de 2026</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">LNX</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Certificado</span>
+              <h3 class="certificado-card__title">Linux Unhatched</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">30 de março de 2026</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Errors, Exceptions, Debugging, and Troubleshooting</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">24 de novembro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Functions</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">24 de novembro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Conditional Execution and Loops</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">24 de novembro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Operators and User Interaction</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">24 de novembro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Variables, Data Types, Type Casting, and Comments</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">24 de novembro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">JS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Basics of JavaScript</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">8 de novembro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">HTML</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Badge</span>
+              <h3 class="certificado-card__title">HTML Essentials</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">30 de outubro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">HTML</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Certificado</span>
+              <h3 class="certificado-card__title">HTML Essentials</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">30 de outubro de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">OS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Badge</span>
+              <h3 class="certificado-card__title">Operating Systems Basics</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">15 de maio de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">OS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Certificado</span>
+              <h3 class="certificado-card__title">Operating Systems Basics</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">15 de maio de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">OS</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Mobile Operating Systems and Security</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">15 de maio de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">NET</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Mobile Device Connectivity</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">15 de maio de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">LNX</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Linux Operating System</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">15 de maio de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">WIN</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Módulo</span>
+              <h3 class="certificado-card__title">Windows Operating System</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">14 de maio de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">PRO</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Badge</span>
+              <h3 class="certificado-card__title">Engaging Stakeholders for Success</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">7 de abril de 2025</span>
+            </div>
+          </div>
+          <div class="certificado-card reveal">
+            <div class="certificado-card__badge">PRO</div>
+            <div class="certificado-card__content">
+              <span class="certificado-card__type">Certificado</span>
+              <h3 class="certificado-card__title">Engaging Stakeholders for Success</h3>
+              <p class="certificado-card__issuer">Cisco Networking Academy</p>
+              <span class="certificado-card__date">7 de abril de 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section id="contato" class="section contato">
+      <div class="container">
+        <h2 class="section__title reveal">Vamos <span class="highlight">Conversar</span></h2>
+        <p class="section__subtitle reveal">Estou aberta a oportunidades de estágio e projetos freelance</p>
+
+        <div class="contato__grid">
+          <div class="contato__card reveal">
+            <h3>Informações de Contato</h3>
+            <p>E-mail: martins859@hotmail.com</p>
+            <p>Telefone: (61) 99458-4504</p>
+            <p>Localização: Brasil</p>
+          </div>
+          <form class="reveal">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="certificado-modal" id="certificado-modal" aria-hidden="true">
+    <div class="certificado-modal__backdrop" data-modal-close></div>
+    <div class="certificado-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="certificado-modal-title">
+      <button class="certificado-modal__close" type="button" aria-label="Fechar detalhes" data-modal-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="certificado-modal__badge" id="certificado-modal-badge"></div>
+      <span class="certificado-modal__type" id="certificado-modal-type"></span>
+      <h2 class="certificado-modal__title" id="certificado-modal-title"></h2>
+      <dl class="certificado-modal__details">
+        <div>
+          <dt>Instituição</dt>
+          <dd id="certificado-modal-issuer"></dd>
+        </div>
+        <div>
+          <dt>Conclusão</dt>
+          <dd id="certificado-modal-date"></dd>
+        </div>
+      </dl>
+      <p class="certificado-modal__description" id="certificado-modal-description"></p>
+      <a class="btn btn--primary certificado-modal__link"
+        href="https://www.netacad.com/pt/profile?&tab=badges" target="_blank" rel="noopener noreferrer">
+        Ver no Cisco Networking Academy
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Tiago.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scripts básicos para interatividade
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header--scrolled');
+      } else {
+        header.classList.remove('header--scrolled');
+      }
+    });
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      navToggle.classList.toggle('active');
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+    });
+
+    const certificadoModal = document.getElementById('certificado-modal');
+    const certificadoCards = document.querySelectorAll('.certificado-card');
+    const certificadoModalClose = certificadoModal.querySelector('.certificado-modal__close');
+    let certificadoCardAtivo = null;
+
+    const detalhesPorTipo = {
+      Badge: 'Badge digital conquistado após a conclusão dos requisitos desta formação.',
+      Certificado: 'Certificado emitido após a conclusão desta formação na Cisco Networking Academy.',
+      'Módulo': 'Módulo concluído como parte da trilha de aprendizagem da Cisco Networking Academy.'
+    };
+
+    function abrirDetalhesCertificado(card) {
+      const tipo = card.querySelector('.certificado-card__type').textContent.trim();
+      const titulo = card.querySelector('.certificado-card__title').textContent.trim();
+      const emissor = card.querySelector('.certificado-card__issuer').textContent.trim();
+      const data = card.querySelector('.certificado-card__date').textContent.trim();
+      const badge = card.querySelector('.certificado-card__badge').textContent.trim();
+
+      certificadoCardAtivo = card;
+      document.getElementById('certificado-modal-badge').textContent = badge;
+      document.getElementById('certificado-modal-type').textContent = tipo;
+      document.getElementById('certificado-modal-title').textContent = titulo;
+      document.getElementById('certificado-modal-issuer').textContent = emissor;
+      document.getElementById('certificado-modal-date').textContent = data;
+      document.getElementById('certificado-modal-description').textContent =
+        detalhesPorTipo[tipo] || 'Conquista obtida na Cisco Networking Academy.';
+
+      certificadoModal.classList.add('active');
+      certificadoModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      certificadoModalClose.focus();
+    }
+
+    function fecharDetalhesCertificado() {
+      certificadoModal.classList.remove('active');
+      certificadoModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+
+      if (certificadoCardAtivo) {
+        certificadoCardAtivo.focus();
+      }
+    }
+
+    certificadoCards.forEach((card) => {
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', `Ver detalhes de ${card.querySelector('.certificado-card__title').textContent.trim()}`);
+
+      card.addEventListener('click', () => abrirDetalhesCertificado(card));
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          abrirDetalhesCertificado(card);
+        }
+      });
+    });
+
+    certificadoModal.querySelectorAll('[data-modal-close]').forEach((element) => {
+      element.addEventListener('click', fecharDetalhesCertificado);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && certificadoModal.classList.contains('active')) {
+        fecharDetalhesCertificado();
+      }
+    });
+  </script>
+</body>
+
+</html>
