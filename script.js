@@ -384,7 +384,7 @@ function initContactForm() {
                 const href = link.getAttribute('href');
                 if (!href || href === '#') {
                     e.preventDefault();
-                    showNotification('Adicione seu curriculo em assets/resume/curriculo.pdf', 'error');
+                    showNotification('Adicione seu curriculo em assets/resume/Curriculo_Tiago_Martins.docx', 'error');
                 }
             });
         });
