@@ -21,7 +21,7 @@
         const el = document.getElementById('typed-text');
         if (!el) return;
         const titles = [
-            'Desenvolvedor Full Stack',
+            'Desenvolvedor Full Stack Júnior',
             'Criador de Solucoes Web',
             'Apaixonado por Tecnologia',
             'Freelancer Disponivel'
@@ -384,7 +384,7 @@ function initContactForm() {
                 const href = link.getAttribute('href');
                 if (!href || href === '#') {
                     e.preventDefault();
-                    showNotification('Adicione seu curriculo em assets/resume/Curriculo_Tiago_Martins.docx', 'error');
+                    showNotification('Adicione seu curriculo em assets/resume/Curriculo_Tiago_Martins.pdf', 'error');
                 }
             });
         });
